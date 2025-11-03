@@ -2,23 +2,56 @@
 
 Manage Teams external federation and allowed domain configurations. Implements zero-trust external collaboration by enforcing allow-list based policies.
 
-## Scripts
+## 📋 Scripts
 
-### Install-TeamsModule.ps1
+### `Install-TeamsModule.ps1`
 Install and validate the Microsoft Teams PowerShell module.
 
-### Connect-TeamsTenant.ps1
+```powershell
+.\Install-TeamsModule.ps1
+```
+
+---
+
+### `Connect-TeamsTenant.ps1`
 Establish authenticated connection to Microsoft Teams (supports MFA).
 
-### Validate-FederationConfig.ps1
+```powershell
+.\Connect-TeamsTenant.ps1
+```
+
+---
+
+### `Validate-FederationConfig.ps1`
 Audit current Teams federation configuration and identify policy mode (allow-list/block-list/open/disabled).
 
-### Enable-AllowListMode.ps1
-Switch Teams federation to allow-list mode (blocks all domains until explicitly allowed).  
+```powershell
+.\Validate-FederationConfig.ps1
+```
+
+---
+
+### `Enable-AllowListMode.ps1`
+Switch Teams federation to allow-list mode (blocks all domains until explicitly allowed).
+
+```powershell
+.\Enable-AllowListMode.ps1
+```
+
 **⚠️ WARNING**: Blocks all external federation immediately.
 
-### Manage-AllowListDomains.ps1
+---
+
+### `Manage-AllowListDomains.ps1`
 Interactive menu tool for managing allowed/blocked domains. Reads from `C:\temp\domains.txt`.
+
+```powershell
+# Create domain file manually or via cli
+Set-Content -Path C:\temp\domains.txt -Value "partner1.com","partner2.com"
+
+# Run management tool
+.\Manage-AllowListDomains.ps1
+```
 
 **Menu Options:**
 1. Add domains from TXT file
