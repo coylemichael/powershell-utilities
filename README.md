@@ -19,4 +19,3 @@ Manage Microsoft Teams external federation and allowed domain configurations.
 ---
 
 **Author**: Michael Coyle  
-**Repository**: https://github.com/accelins/it-powershell-utilities.git
