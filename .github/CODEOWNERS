@@ -1,0 +1,8 @@
+# Code Owners for IT PowerShell Utilities
+# These owners will be automatically requested for review when someone opens a pull request.
+
+# Default owners for everything in the repo
+* @accelins/information-security-team
+
+# Teams External Access scripts
+/Teams/ExternalAccess/ @accelins/information-security-team
